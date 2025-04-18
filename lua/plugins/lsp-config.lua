@@ -16,7 +16,6 @@ return {
 					"cssls",
 					"pyright",
 					"rust_analyzer",
-					"eslint_d",
 				},
 			})
 		end,
