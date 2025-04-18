@@ -16,11 +16,7 @@ return {
 					"cssls",
 					"pyright",
 					"rust_analyzer",
-					"stylua",
-					"black",
-					"eslint",
-					"prettier",
-					"isort",
+					"eslint_d",
 				},
 			})
 		end,
