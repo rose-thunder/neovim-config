@@ -14,7 +14,7 @@ return {
 					"ts_ls",
 					"html",
 					"cssls",
-					"pyright",
+					"pylsp",
 					"rust_analyzer",
 				},
 			})
