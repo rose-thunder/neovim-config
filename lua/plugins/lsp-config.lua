@@ -37,7 +37,7 @@ return {
 			lspconfig.cssls.setup({
 				capabilities = capabilities,
 			})
-			lspconfig.pyright.setup({
+			lspconfig.pylsp.setup({
 				capabilities = capabilities,
 			})
 			lspconfig.rust_analyzer.setup({
