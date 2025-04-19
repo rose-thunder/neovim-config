@@ -1,4 +1,3 @@
--- lazy.nvim install
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -12,6 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+<<<<<<< HEAD
 -- LSP config
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(ev)
@@ -42,3 +42,7 @@ require("lazy").setup("plugins")
 
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("ts_ls")
+=======
+require("vim-options")
+require("lazy").setup("plugins")
+>>>>>>> parent of 9b53c40 (started adding native lsp config)
