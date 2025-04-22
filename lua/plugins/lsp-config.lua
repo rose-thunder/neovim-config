@@ -16,6 +16,7 @@ return {
 					"cssls",
 					"pylsp",
 					"rust_analyzer",
+					"gopls",
 				},
 			})
 		end,
@@ -42,6 +43,18 @@ return {
 			})
 			lspconfig.rust_analyzer.setup({
 				capabilities = capabilities,
+			})
+			lspconfig.gopls.setup({
+				capabilities = capabilities,
+        settings = {
+          gopls = {
+            completeUnimported = true,
+            usePlaceholders = true,
+            analyses = {
+              unusedparams = true,
+            },
+          },
+        },
 			})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
