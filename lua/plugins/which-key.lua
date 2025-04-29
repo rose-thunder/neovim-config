@@ -1,5 +1,9 @@
 return {
   "folke/which-key.nvim",
+  dependencies = {
+    { "echasnovski/mini.icons", version = false },
+    "nvim-tree/nvim-web-devicons",
+  },
   event = "VeryLazy",
   config = function()
     vim.o.timeout = true
