@@ -1,6 +1,9 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      "HiPhish/rainbow-delimiters.nvim",
+    },
     build = ":TSUpdate",
     config = function()
       local config = require("nvim-treesitter.configs")
