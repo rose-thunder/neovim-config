@@ -17,6 +17,8 @@ vim.o.undofile = true
 
 vim.o.scrolloff = 10
 
+vim.o.termguicolors = true
+
 vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
 vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
 vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
