@@ -10,7 +10,8 @@ return {
   config = function()
     local config = require("render-markdown")
     config.setup({
-      ink = {
+      latex = { enabled = false },
+      link = {
         enabled = true,
         render_modes = false,
         footnote = {
@@ -238,16 +239,6 @@ return {
         right_pad = 0,
         highlight = "RenderMarkdownBullet",
         scope_highlight = {},
-      },
-
-      quote = {
-        enabled = true,
-        ignore_conceal = {
-          code_background = true,
-          sign = true,
-        },
-        above = 0,
-        below = 0,
       },
     })
   end,
