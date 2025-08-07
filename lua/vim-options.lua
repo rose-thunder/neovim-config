@@ -27,7 +27,7 @@ vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 
 vim.keymap.set("n", "<leader>w", ":write<CR>")
-vim.keymap.set("n", "<leader>q", ":quit<CR>")
+vim.keymap.set("n", "<leader>q", ":quitall<CR>")
 
 vim.keymap.set("n", "<leader>nn", function()
   if vim.wo.relativenumber then
