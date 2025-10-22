@@ -27,6 +27,16 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
+      local config = require("lspconfig")
+      config.sourcekit.setup({
+        capabilities = {
+          workspace = {
+            didChangedWatchedFiles = {
+              dynamicRegistration = true,
+            },
+          },
+        },
+      })
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       vim.lsp.config("*", {
         capabilities = capabilities,
