@@ -43,6 +43,8 @@ return {
       vim.lsp.enable("black")
       vim.lsp.enable("stylua")
       vim.lsp.enable("prettier")
+      vim.lsp.enable("gdtoolkit")
+      vim.lsp.enable("gdscript")
     end,
   },
   {
