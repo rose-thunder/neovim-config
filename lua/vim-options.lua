@@ -37,3 +37,8 @@ vim.keymap.set("n", "<leader>nn", function()
     vim.wo.relativenumber = true
   end
 end)
+
+local projectfile = vim.fn.getcwd() .. "/project.godot"
+if projectfile then
+  vim.fn.serverstart("./godothost")
+end
