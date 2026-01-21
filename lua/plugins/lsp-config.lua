@@ -1,8 +1,22 @@
 return {
   {
     "williamboman/mason.nvim",
+    dependencies = {},
     config = function()
       require("mason").setup({})
+    end,
+  },
+  {
+    "jay-babu/mason-nvim-dap.nvim",
+    config = function()
+      require("mason-nvim-dap").setup({
+        ensure_installed = { "cppdbg" },
+        handlers = {
+          function(config)
+            require("mason-nvim-dap").default_setup(config)
+          end,
+        },
+      })
     end,
   },
   {
