@@ -16,6 +16,7 @@ return {
           "rust_analyzer",
           "clangd",
           "html",
+          "cssls",
           "omnisharp",
         },
       })
@@ -38,11 +39,14 @@ return {
       vim.lsp.enable("rust_analyzer")
       vim.lsp.enable("clangd")
       vim.lsp.enable("html")
+      vim.lsp.enable("cssls")
       vim.lsp.enable("omnisharp")
+      vim.lsp.enable("gdtoolkit")
       vim.lsp.enable("isort")
       vim.lsp.enable("black")
       vim.lsp.enable("stylua")
       vim.lsp.enable("prettier")
+      vim.lsp.enable("clang-format")
     end,
   },
   {
