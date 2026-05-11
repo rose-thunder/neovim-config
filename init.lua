@@ -1,4 +1,4 @@
 require("pack")
 require("vim-options")
 
-vim.cmd("colorscheme nord")
+vim.cmd("colorscheme evergarden")

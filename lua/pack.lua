@@ -39,7 +39,7 @@ vim.pack.add({
   { src = "https://github.com/folke/trouble.nvim" },
 
   -- colorscheme
-  { src = "https://github.com/gbprod/nord.nvim" },
+  { src = "https://codeberg.org/evergarden/nvim.git", name = "evergarden" },
 })
 
 -- Custom commands
