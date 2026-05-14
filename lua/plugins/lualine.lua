@@ -1,6 +1,6 @@
 local lualine = require("lualine")
 lualine.setup({
-  options = {
-    theme = "auto",
-  },
+    options = {
+        theme = "everforest",
+    },
 })

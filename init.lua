@@ -1,4 +1,4 @@
 require("pack")
 require("vim-options")
 
-vim.cmd("colorscheme evergarden")
+vim.cmd("colorscheme everforest")

@@ -12,9 +12,9 @@
       "rev": "cbc7b02bb99fae35cb42f514762b89b5126651ef",
       "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
     },
-    "evergarden": {
-      "rev": "71be008947c25115d96b8effdd62e87fcb059fcc",
-      "src": "https://codeberg.org/evergarden/nvim.git"
+    "everforest-nvim": {
+      "rev": "d235ca0aa6a29546e661a020e2618612acbbffbe",
+      "src": "https://github.com/neanias/everforest-nvim"
     },
     "gitsigns.nvim": {
       "rev": "b01433169be710d6c69f7b4ee264d9670698b831",
