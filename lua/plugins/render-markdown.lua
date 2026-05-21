@@ -1,6 +1,7 @@
 local config = require("render-markdown")
 config.setup({
     completions = { lsp = { enabled = true } },
+    file_types = { "markdown" },
     latex = { enabled = false },
     link = {
         enabled = true,
@@ -230,5 +231,43 @@ config.setup({
         right_pad = 0,
         highlight = "RenderMarkdownBullet",
         scope_highlight = {},
+    },
+
+    heading = {
+        enabled = true,
+        render_modes = false,
+        atx = true,
+        setext = true,
+        sign = true,
+        icons = { "󰲡 ", "󰲣 ", "󰲥 ", "󰲧 ", "󰲩 ", "󰲫 " },
+        position = "inline",
+        signs = { "󰫎 " },
+        width = "full",
+        left_margin = 0,
+        left_pad = 0,
+        right_pad = 0,
+        min_width = 0,
+        border = false,
+        border_virtual = false,
+        border_prefix = false,
+        above = "▄",
+        below = "▀",
+        backgrounds = {
+            "RenderMarkdownH1",
+            "RenderMarkdownH2",
+            "RenderMarkdownH3",
+            "RenderMarkdownH4",
+            "RenderMarkdownH5",
+            "RenderMarkdownH6",
+        },
+        foregrounds = {
+            "RenderMarkdownH1",
+            "RenderMarkdownH2",
+            "RenderMarkdownH3",
+            "RenderMarkdownH4",
+            "RenderMarkdownH5",
+            "RenderMarkdownH6",
+        },
+        custom = {},
     },
 })
