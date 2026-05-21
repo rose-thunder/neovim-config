@@ -1,9 +1,13 @@
 -- config
-require("telescope").setup({
-  extensions = {
-    ["ui-select"] = {
-      require("telescope.themes").get_dropdown({}),
+local telescope = require("telescope")
+telescope.setup({
+    extensions = {
+        ["ui-select"] = {
+            require("telescope.themes").get_dropdown({}),
+        },
+        ["zf-native"] = {},
     },
-  },
 })
-require("telescope").load_extension("ui-select")
+
+telescope.load_extension("ui-select")
+telescope.load_extension("zf-native")

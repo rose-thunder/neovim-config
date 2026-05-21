@@ -12,6 +12,8 @@ vim.o.relativenumber = true
 vim.o.mouse = "a"
 
 vim.o.breakindent = true
+vim.o.smartindent = true
+vim.o.wrap = false
 
 vim.o.undofile = true
 
@@ -37,6 +39,14 @@ vim.keymap.set("n", "<leader>nn", function()
         vim.wo.number = true
     else
         vim.wo.relativenumber = true
+    end
+end)
+
+vim.keymap.set("n", "<leader>lw", function()
+    if vim.wo.wrap then
+        vim.wo.wrap = false
+    else
+        vim.wo.wrap = true
     end
 end)
 
