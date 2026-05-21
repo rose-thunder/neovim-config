@@ -22,6 +22,7 @@ vim.o.scrolloff = 10
 vim.o.termguicolors = true
 
 vim.o.signcolumn = "yes"
+vim.o.colorcolumn = "80"
 
 -- General keymaps
 vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
