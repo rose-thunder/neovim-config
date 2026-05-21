@@ -1,7 +1,8 @@
 -- config
 local neotree = require("neo-tree")
 neotree.setup({
-  window = {
-    width = 30,
-  },
+    window = {
+        position = "right",
+        width = 30,
+    },
 })

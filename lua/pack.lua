@@ -14,12 +14,18 @@ vim.pack.add({
     { src = "https://github.com/folke/which-key.nvim" },
 
     -- telescope
-    { src = "https://github.com/nvim-telescope/telescope.nvim", branch = "master" },
+    {
+        src = "https://github.com/nvim-telescope/telescope.nvim",
+        branch = "master",
+    },
     { src = "https://github.com/nvim-telescope/telescope-ui-select.nvim" },
     { src = "https://github.com/natecraddock/telescope-zf-native.nvim" },
 
     -- treesitter
-    { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "main" },
+    {
+        src = "https://github.com/nvim-treesitter/nvim-treesitter",
+        version = "main",
+    },
     { src = "https://github.com/HiPhish/rainbow-delimiters.nvim" },
     { src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
 
@@ -34,7 +40,10 @@ vim.pack.add({
     { src = "https://github.com/mason-org/mason-lspconfig.nvim" },
 
     -- filetree
-    { src = "https://github.com/nvim-neo-tree/neo-tree.nvim", version = vim.version.range("3") },
+    {
+        src = "https://github.com/nvim-neo-tree/neo-tree.nvim",
+        version = vim.version.range("3"),
+    },
 
     -- debugging
     { src = "https://github.com/folke/todo-comments.nvim" },

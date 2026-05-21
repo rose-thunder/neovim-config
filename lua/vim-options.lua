@@ -22,7 +22,6 @@ vim.o.scrolloff = 10
 vim.o.termguicolors = true
 
 vim.o.signcolumn = "yes"
-vim.o.colorcolumn = "80"
 
 -- General keymaps
 vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
@@ -50,6 +49,11 @@ vim.keymap.set("n", "<leader>lw", function()
         vim.wo.wrap = true
     end
 end)
+
+-- LSP keymaps
+vim.keymap.set("n", "gd", vim.lsp.buf.definition)
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename)
 
 -- Plugins keymaps
 local builtin = require("telescope.builtin")

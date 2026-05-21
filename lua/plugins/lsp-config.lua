@@ -1,58 +1,69 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-  ensure_installed = {
+    ensure_installed = {
+        "lua_ls",
+        "ts_ls",
+        "clangd",
+        "html",
+        "cssls",
+        "omnisharp",
+    },
+})
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local servers = {
     "lua_ls",
     "ts_ls",
-    "pyright",
-    "rust_analyzer",
     "clangd",
     "html",
     "cssls",
     "omnisharp",
-  },
-})
-local capabilities = require("cmp_nvim_lsp").default_capabilities()
-vim.lsp.config("*", {
-  capabilities = capabilities,
-})
+    "gdtoolkit",
+    "stylua",
+    "prettier",
+    "csharpier",
+}
+for _, lsp in ipairs(servers) do
+    vim.lsp.config(lsp, { capabilities = capabilities })
+end
 
-vim.lsp.enable("lua_ls")
-vim.lsp.enable("ts_ls")
-vim.lsp.enable("pyright")
-vim.lsp.enable("rust_analyzer")
-vim.lsp.enable("clangd")
-vim.lsp.enable("html")
-vim.lsp.enable("cssls")
-vim.lsp.enable("omnisharp")
-vim.lsp.enable("gdtoolkit")
-vim.lsp.enable("isort")
-vim.lsp.enable("black")
-vim.lsp.enable("stylua")
-vim.lsp.enable("prettier")
-vim.lsp.enable("clang-format")
+vim.lsp.enable(servers)
+
+local godot_project = vim.fs.find("project.godot", {
+    type = "file",
+    path = vim.fn.getcwd(),
+    limit = 1,
+    upward = true,
+})
+if #godot_project > 0 then
+    local rel = vim.fn.fnamemodify(godot_project[1], ":.")
+    local depth = select(2, rel:gsub("/", ""))
+    if depth <= 1 then
+        pcall(vim.fn.serverstart, "127.0.0.1:6004")
+    end
+end
 
 local cmp = require("cmp")
 require("luasnip.loaders.from_vscode").lazy_load()
 cmp.setup({
-  snippet = {
-    expand = function(args)
-      require("luasnip").lsp_expand(args.body)
-    end,
-  },
-  window = {
-    completion = cmp.config.window.bordered(),
-    documentation = cmp.config.window.bordered(),
-  },
-  mapping = cmp.mapping.preset.insert({
-    ["<C-b>"] = cmp.mapping.scroll_docs(-4),
-    ["<C-f>"] = cmp.mapping.scroll_docs(4),
-    ["<C-Space>"] = cmp.mapping.complete(),
-    ["<C-e>"] = cmp.mapping.abort(),
-    ["<CR>"] = cmp.mapping.confirm({ select = true }),
-  }),
-  sources = cmp.config.sources({
-    { name = "nvim_lsp" },
-    { name = "luasnip" },
-    { name = "buffer" },
-  }),
+    snippet = {
+        expand = function(args)
+            require("luasnip").lsp_expand(args.body)
+        end,
+    },
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+    },
+    mapping = cmp.mapping.preset.insert({
+        ["<C-b>"] = cmp.mapping.scroll_docs(-4),
+        ["<C-f>"] = cmp.mapping.scroll_docs(4),
+        ["<C-Space>"] = cmp.mapping.complete(),
+        ["<C-e>"] = cmp.mapping.abort(),
+        ["<CR>"] = cmp.mapping.confirm({ select = true }),
+    }),
+    sources = cmp.config.sources({
+        { name = "nvim_lsp" },
+        { name = "luasnip" },
+        { name = "buffer" },
+    }),
 })
