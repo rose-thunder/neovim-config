@@ -24,7 +24,7 @@ vim.pack.add({
     -- treesitter
     {
         src = "https://github.com/nvim-treesitter/nvim-treesitter",
-        version = "main",
+        version = "master",
     },
     { src = "https://github.com/HiPhish/rainbow-delimiters.nvim" },
     { src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
