@@ -2,11 +2,6 @@ require("hooks")
 
 -- Plugins
 vim.pack.add({
-    -- Dependencies
-    { src = "https://github.com/nvim-lua/plenary.nvim" },
-    { src = "https://github.com/MunifTanjim/nui.nvim" },
-    { src = "https://github.com/nvim-tree/nvim-web-devicons" },
-
     -- Plugins
     { src = "https://github.com/nvim-lualine/lualine.nvim" },
     { src = "https://github.com/lewis6991/gitsigns.nvim" },
@@ -50,6 +45,11 @@ vim.pack.add({
 
     -- colorscheme
     { src = "https://github.com/neanias/everforest-nvim" },
+
+    -- Dependencies
+    { src = "https://github.com/nvim-lua/plenary.nvim" },
+    { src = "https://github.com/MunifTanjim/nui.nvim" },
+    { src = "https://github.com/nvim-tree/nvim-web-devicons" },
 })
 
 -- Custom commands
