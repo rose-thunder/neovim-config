@@ -19,7 +19,7 @@ local servers = {
     "omnisharp",
     "gdtoolkit",
     "stylua",
-    "prettier",
+    "prettierd",
     "csharpier",
 }
 for _, lsp in ipairs(servers) do
